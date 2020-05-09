@@ -38,7 +38,32 @@ __Datasheet of this IMU:__
 https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-9150-Datasheet.pdf
 
 The advantages of MPU-9150 over MPU-6050 is that it has an additional 3-axis digital compass. This IMU can be used if the Hexapod need to operate over rough terrain. But, to keep in mind that this IMU costs some more money 6050 IMU. These chips use I2C (inter-integrated circuit) protocol for communication. Hence the communication between the sensor and the computer can be easily implemented by communicating the Arduino through the I2C protocol.
-
-![Arduino MPU 6050 connections](https://maker.pro/arduino/tutorial/how-to-interface-arduino-and-the-mpu-6050-sensor)
-
 We need to buy six IMU sensors for each leg in the Hexapod. Based on our requirements and availbilty we can choose either of one.
+
+![Arduino MPU 6050 connections](https://github.com/BalaDhinesh/ElectronicsClub-MiniTask3/blob/master/Project2/Arduino%20MPU6050%20connections.png)
+
+
+
+
+__To model the values from the Arduino compatible MPU-6050 in 3D:__
+We use a software called Processing. Processing is mainly used for visualizing data and rendering it in 2D/3D models.
+
+
+__GIF showing 3d model processing:__
+
+
+![GIF-img](https://media.giphy.com/media/kbbeWC23w4sPW4oHrU/giphy.gif)
+
+
+
+__Tutorial on how to upload the Code and Test the Arduino MPU 6050 and 3D Processing:__
+
+Web link:
+
+https://maker.pro/arduino/tutorial/how-to-interface-arduino-and-the-mpu-6050-sensor
+
+
+To change the 3d shape to our needs, we need to code some more information in the Processing Software. To see more details on how to code, refer this link:
+[Drawing 3D Shapes With Processing](https://vormplus.be/full-articles/drawing-3d-shapes-with-processing)
+
+
