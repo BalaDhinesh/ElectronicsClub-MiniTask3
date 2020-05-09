@@ -1,4 +1,4 @@
-# Project:2
+# Project2: Hexapod
 ## Problem Statement:
 To recreate an exact orientation of the 18 DOF Hexapod on a computer screen using the data obtained from the sensors attached in the Hexapod.
 
