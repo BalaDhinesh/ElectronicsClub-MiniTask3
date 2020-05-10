@@ -41,7 +41,9 @@ The MPU-9150 is a System in Package (SiP) that combines two chips: the MPU-6050,
 The advantages of MPU-9150 over MPU-6050 is that it has an additional 3-axis digital compass. This IMU can be used especially if the Hexapod need to operate over rough terrain. Point to note that this IMU costs some more money than 6050 IMU.
 We need to buy six IMU sensors for each leg in the Hexapod. Based on our requirements and availbilty we can choose either of one.
 
- These chips use I2C (inter-integrated circuit) protocol for communication. Hence the communication between the sensor and the computer can be easily implemented by communicating the Arduino through the I2C protocol.
+## What type of microcontroller do I need to use?
+
+ These chips use I2C (inter-integrated circuit) protocol for communication. Hence the communication between the sensor and the computer can be easily implemented by communicating the Arduino through the I2C protocol. Also Arduino provides separate libraries for each of the above sensor and therefore coding part becomes reduced.
 
 ![Arduino MPU 6050 connections](https://github.com/BalaDhinesh/ElectronicsClub-MiniTask3/blob/master/Project2/Arduino%20MPU6050%20connections.png)
 
