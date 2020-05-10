@@ -72,3 +72,26 @@ __To change the 3d shape to our needs,__ we need to code some more information i
 [Drawing 3D Shapes With Processing](https://vormplus.be/full-articles/drawing-3d-shapes-with-processing)
 
 
+## How to manage the wires?
+From the above idea, we can be able to connect only one IMU sensor to the Arduino. But we need to send 6IMU's to the Arduino.Well an I2C bus is capable of communicating with 127 different sensors. But those sensors should have differnent address. Since we use six of the same IMU-6050 sensors, all have the same address(0X68 if AD0 is low and 0X69 if high). One way is that we can convert all the six sensors to different addresses. This can be acheived using a multiplxer with an I2C interface. We can use TCA9548A 1-to-8 I2C multiplexer for our purpose.
+
+
+Using it is fairly straight-forward: The multiplexer itself is on I2C address 0x70 (but can be adjusted from 0x70 to 0x77) and you simply write a single byte with the desired multiplexed output number to that port, and bam - any future I2C packets will get sent to that port. In theory, you could have 8 of these multiplexers on each of 0x70-0x77 addresses in order to control 64 of the same-I2C-addressed-part.
+
+
+![Multiplexer](https://cdn-learn.adafruit.com/assets/assets/000/027/696/medium800/adafruit_products_2717_kit_ORIG.jpg?1442011561)
+
+
+
+![Diagram of I2C communication](https://i5j2k7b8.rocketcdn.me/wp-content/uploads/2017/06/I2C-Communication-How-It-Works.png)
+
+
+By this way, we can connect all 6 IMU sensors to any one of the 8 pins(SD0 to SD7). There are two pins in each SD0 to SD7. One for SCL and another for SDA. The SCL and SDA pin of the multiplexer should be connected to the A5 and A4 pin of the Arduino respectively(these pins have inbuilt I2C bus interface communication). The Arduino here acts as master and the IMU's acts as slave for I2C communication.
+
+
+__Datasheet of this multiplexer:__
+[Datasheet](https://www.ti.com/lit/ds/symlink/tca9548a.pdf?&ts=1589076351652)
+
+
+
+
